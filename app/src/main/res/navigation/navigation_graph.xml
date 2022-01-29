@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.gsixacademy.android.bored.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/activity_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_generatorFragment"
+            app:destination="@id/generatorFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/generatorFragment"
+        android:name="com.gsixacademy.android.bored.GeneratorFragment"
+        android:label="GeneratorFragment"
+        tools:layout="@layout/activity_generator">
+        <action
+            android:id="@+id/action_generatorFragment_to_ideaFragment"
+            app:destination="@id/ideaFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/ideaFragment"
+        android:name="com.gsixacademy.android.bored.IdeaFragment"
+        android:label="IdeaFragment"
+        tools:layout="@layout/activity_idea"/>
+
+</navigation>
